@@ -1,0 +1,21 @@
+insert data into users: 20 users
+insert into users values('xiexin2011@gmail.com', 'password', 'password', 'XIN', 'XIE', 'Singapore');
+insert into users values('huangran1991@yahoo.com', 'password', 'password', 'RAN', 'HUANG', 'Singapore');
+insert into users values('gohengchye1992@msn.com', 'password', 'password', 'ENG CHYE', 'GOH', 'Singapore');
+insert into users values('gohhuiying1989@gmail.com', 'password', 'password', 'HUI YING', 'GOH', 'Singapore');
+insert into users values('fanghan2011@hotmail.com', 'password', 'password', 'HAN', 'FANG', 'Singapore');
+insert into users values ('dingkuanchong2010@msn.com', 'password', 'password', 'KUAN CHONG', 'DING', 'Singapore');
+insert into users values ('pengjiayuan2011@hotmail.com', 'password', 'password', 'JIAYUAN', 'PENG', 'Singapore');
+insert into users values ('huangzhanpeng1992@msn.com', 'password', 'password', 'ZHANPENG', 'HUANG', 'Singapore');
+insert into users values ('ngoogekping1990@hotmail.com', 'password', 'password', 'GEK PING', 'NGOO', 'Singapore');
+insert into users values ('geyuwei1992@hotmail.com', 'password', 'password', 'YUWEI', 'GE', 'Singapore');
+insert into users values ('zhengzhemin1991@yahoo.com', 'password', 'password', 'ZHEMIN', 'ZHENG', 'Singapore');
+insert into users values ('liuzhanpeng2011@msn.com', 'password', 'password', 'ZHANPENG', 'LIU', 'Singapore');
+insert into users values ('huangwenxin2010@msn.com', 'password', 'password', 'WENXIN', 'HUANG', 'Singapore');
+insert into users values ('choyweixiang2011@gmail.com', 'password', 'password', 'WEI XIANG', 'CHOY', 'Singapore');
+insert into users values ('wangna1990@yahoo.com', 'password', 'password', 'NA', 'WANG', 'Singapore');
+insert into users values ('zhouhuichan1990@msn.com', 'password', 'password', 'HUICHAN', 'ZHOU', 'Singapore');
+insert into users values ('nganhquang1991@yahoo.com', 'password', 'password', 'ANH QUANG', 'NG', 'Singapore');
+insert into users values ('huangqi1990@msn.com', 'password', 'password', 'QI', 'HUANG', 'Singapore');
+insert into users values ('dinggekping1991@msn.com', 'password', 'password', 'GEK PING', 'DING', 'Singapore');
+insert into users values ('pohhuiling1992@hotmail.com', 'password', 'password', 'HUI LING', 'POH', 'Singapore');
