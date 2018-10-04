@@ -50,7 +50,7 @@ int main()
 
 /*
 RESULTS (NOT FINISHED YET!)
- INTO project_initiated_by VALUES(DEFAULT, '', '', '','2012-7-15', 30, 0, 0, 3000000,'ONGOING','Isreal','cityY', '520932930@gmail.com');
+ INSERT INTO project_initiated_by VALUES(DEFAULT, '', '', '','2012-7-15', 30, 0, 0, 3000000,'ONGOING','Isreal','cityY', '520932930@gmail.com');
  INSERT INTO project_initiated_by VALUES(DEFAULT, '', '', '','2017-8-8', 7, 0, 0, 700000,'ONGOING','Austrilia','cityL', '16807@gmail.com');
  INSERT INTO project_initiated_by VALUES(DEFAULT, '', '', '','2016-3-15', 14, 0, 0, 1400000,'ONGOING','Japan','cityW', '33614@gmail.com');
  INSERT INTO project_initiated_by VALUES(DEFAULT, '', '', '','2015-10-22', 21, 0, 0, 2100000,'ONGOING','United Kingdom','cityH', '50421@gmail.com');
