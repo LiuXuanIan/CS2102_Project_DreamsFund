@@ -87,9 +87,7 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Sign Up Successfully!</h1>
-							<h2><a href="userProfile.php">View My Profile</a></h2>
-							<h2><a href="initiate.php">Start a Project</a></h2>
-							<h2><a href="invest.php">Invest a Project</a></h2>
+							<h2>Click <a href="signIn.php">here</a> to sign in</h2>
 						</div>
 					</div>
 				</div>
