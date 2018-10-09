@@ -178,7 +178,7 @@
 					</form>		
 				</div>
 				<?php
-					$db = pg_connect("host=localhost port=5432 dbname=Project user=postgres password=1Dcyq7!!");
+					$db = pg_connect("host=localhost port=5432 dbname=CrowdFunding user=postgres password=1Dcyq7!!");
 					if(isset($_POST['Initiate project'])) {
 						session_start();
 						if (!isset($_SESSION['email'])) {
