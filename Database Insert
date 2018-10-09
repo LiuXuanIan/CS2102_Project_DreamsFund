@@ -19,3 +19,20 @@ insert into users values ('nganhquang1991@yahoo.com', 'password', 'password', 'A
 insert into users values ('huangqi1990@msn.com', 'password', 'password', 'QI', 'HUANG', 'Singapore');
 insert into users values ('dinggekping1991@msn.com', 'password', 'password', 'GEK PING', 'DING', 'Singapore');
 insert into users values ('pohhuiling1992@hotmail.com', 'password', 'password', 'HUI LING', 'POH', 'Singapore');
+
+
+insert data into category: 14 categories
+INSERT INTO category VALUES ('Banking');
+INSERT INTO category VALUES ('Education');
+INSERT INTO category VALUES ('Manifacturing');
+INSERT INTO category VALUES ('Tourism');
+INSERT INTO category VALUES ('Food');
+INSERT INTO category VALUES ('Art');
+INSERT INTO category VALUES ('Fasion');
+INSERT INTO category VALUES ('Games');
+INSERT INTO category VALUES ('Technology');
+INSERT INTO category VALUES ('Photography');
+INSERT INTO category VALUES ('Health');
+INSERT INTO category VALUES ('Law');
+INSERT INTO category VALUES ('Gardening');
+INSERT INTO category VALUES ('Service');
