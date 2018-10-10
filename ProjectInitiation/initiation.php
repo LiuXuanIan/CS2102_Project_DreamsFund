@@ -230,6 +230,7 @@
 		        					echo '<meta http-equiv="refresh" content="0; URL=initiationFailed.php" />';
 		        				} else {
 		        					$_SESSION['projectid'] = $secondResult[projectid];
+		        					$thirdResult = pg_query($db, "INSERT INTO belong_to VALUES ('$_POST[category]', $_SESSION['projectid'])");
 		        					echo '<meta http-equiv="refresh" content="0; URL=initiationSuccess.php" />';
 		        				}
 		        			}
