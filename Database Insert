@@ -26,4 +26,3 @@ INSERT INTO category VALUES ('Restaurant, Cafe, and Bakery');
 INSERT INTO category VALUES ('Medical and Health Care');
 INSERT INTO category VALUES ('Retail and Online Store');
 INSERT INTO category VALUES ('Services');
-INSERT INTO category VALUES ('Others');
