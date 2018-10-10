@@ -141,16 +141,13 @@
 					$row    = pg_fetch_assoc($result);
 					if (isset($_POST['next'])) {
 					  if ($row == null) {
-					    echo "11";
   						echo '<meta http-equiv="refresh" content="0; URL= signInNotExist.php" />';
             } else {
               $passwordInDatabase = "$row[password]";
               $enteredPassword = "$_POST[password]";
               if ($enteredPassword == $passwordInDatabase) {
-                echo "22";
-                echo '<meta http-equiv="refresh" content="0; URL= signInSuccess.php" />';
+                echo '<meta http-equiv="refresh" content="0; URL= signInSuccess.php'.'?'.'userEmail='.$accountEmail.'" />';
               } else {
-                echo "33";
                 echo '<meta http-equiv="refresh" content="0; URL= signInFail.php" />';
               }   
             }
