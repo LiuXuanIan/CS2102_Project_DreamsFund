@@ -87,9 +87,18 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Sign in Successfully!</h1>
-							<h2><a href="userProfile.php">View My Profile</a></h2>
-							<h2><a href="initiate.php">Start a Project</a></h2>
-							<h2><a href="invest.php">Invest a Project</a></h2>
+							<?php
+							  $email = $_GET['userEmail'];
+							  $profilePage = "userProfile.php"."?userEmail".$email;
+							  $initiatePage = "initiate.php"."?userEmail".$email;
+							  $investPage = "invest.php"."?userEmail".$email;
+							  echo "<ul><form name='cookie' action='signInSuccess.php' method='POST' >
+                <h2><a href=$profilePage>View My Profile</a></h2>
+							  <h2><a href=$initiatePage>Start a Project</a></h2>
+							  <h2><a href=$investPage>Invest a Project</a></h2>  
+                </form>
+                </ul>";
+							?>
 						</div>
 					</div>
 				</div>
@@ -205,4 +214,6 @@
 
 	</body>
 </html>
+
+
 
