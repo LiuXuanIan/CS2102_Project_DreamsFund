@@ -27,7 +27,7 @@ INSERT INTO category VALUES ('Construction');
 INSERT INTO category VALUES ('Education');
 INSERT INTO category VALUES ('Finance');
 INSERT INTO category VALUES ('Health');
-INSERT INTO category VALUES ('Manufactoring');
+INSERT INTO category VALUES ('Manufacturing');
 INSERT INTO category VALUES ('Professional');
 INSERT INTO category VALUES ('Real Estate');
 INSERT INTO category VALUES ('Retail');
