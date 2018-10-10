@@ -153,11 +153,11 @@
 						            <option value="Education">Education</option>
 						            <option value="Finance">Finance</option>
 						            <option value="Health">Health</option>
-						            <option value="Finance">Finance</option>
 						            <option value="Manufactoring">Manufactoring</option>
 						            <option value="Professional">Professional</option>  
 						            <option value="Real Estate">Real Estate</option>
 						            <option value="Retail">Retail</option>
+						            <option value="Finance">Services</option>
 						            <option value="Transportation">Transportation</option>
 						            <option value="Wholesale">Wholesale</option>
 						        </select>
