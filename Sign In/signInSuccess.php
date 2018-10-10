@@ -91,6 +91,7 @@
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Sign in Successfully!</h1>
 							<?php
+							  $_SESSION[page_number] = 1;
 							  echo "<ul><form name='cookie' action='signInSuccess.php' method='POST' >
                 <h2><a href='userProfile.php'>View My Profile</a></h2>
 							  <h2><a href='initiation.php'>Start a Project</a></h2>
