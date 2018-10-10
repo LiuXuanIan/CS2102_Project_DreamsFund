@@ -102,9 +102,10 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<?php
+						$accountEmail = $_SESSION['userEmail'];
 						$db = pg_connect("host=localhost port=5432 dbname=CrowdFunding user=postgres password=1Dcyq7!!");
 
-						$result = pg_query($db, "SELECT * FROM users WHERE email = 'xiexin2011@gmail.com'");
+						$result = pg_query($db, "SELECT * FROM users WHERE email = '$accountEmail'");
 						$row = pg_fetch_assoc($result);
 						if(!empty($row)){
 							$accountEmail = $row[email];
