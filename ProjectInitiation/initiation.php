@@ -230,7 +230,7 @@
 		        					echo '<meta http-equiv="refresh" content="0; URL=initiationFailed.php" />';
 		        				} else {
 		        					$_SESSION['projectid'] = $secondResult[projectid];
-		        					echo '<meta http-equiv="refresh" content="0; URL=projectDetail.php" />';
+		        					echo '<meta http-equiv="refresh" content="0; URL=initiationSuccess.php" />';
 		        				}
 		        			}
 						}
