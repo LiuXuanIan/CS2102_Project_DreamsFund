@@ -21,8 +21,16 @@ insert into users values ('dinggekping1991@msn.com', 'password', 'password', 'GE
 insert into users values ('pohhuiling1992@hotmail.com', 'password', 'password', 'HUI LING', 'POH', 'Singapore');
 
 
-insert data into category: 4 categories
-INSERT INTO category VALUES ('Restaurant, Cafe, and Bakery');
-INSERT INTO category VALUES ('Medical and Health Care');
-INSERT INTO category VALUES ('Retail and Online Store');
-INSERT INTO category VALUES ('Services');
+insert data into category: 10 categories
+INSERT INTO category VALUES ('Construction');
+INSERT INTO category VALUES ('Transportation');
+INSERT INTO category VALUES ('Retail');
+INSERT INTO category VALUES ('Wholesale');
+INSERT INTO category VALUES ('Finance');
+INSERT INTO category VALUES ('Manufactoring');
+INSERT INTO category VALUES ('Professional');
+INSERT INTO category VALUES ('Agriculture');
+INSERT INTO category VALUES ('Real Estate');
+INSERT INTO category VALUES ('Manufactoring');
+INSERT INTO category VALUES ('Health');
+INSERT INTO category VALUES ('Education');
