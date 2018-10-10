@@ -1,3 +1,6 @@
+<?php
+ session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -145,8 +148,9 @@
             } else {
               $passwordInDatabase = "$row[password]";
               $enteredPassword = "$_POST[password]";
+              $_SESSION['userEmail'] = $accountEmail;
               if ($enteredPassword == $passwordInDatabase) {
-                echo '<meta http-equiv="refresh" content="0; URL= signInSuccess.php'.'?'.'userEmail='.$accountEmail.'" />';
+                echo '<meta http-equiv="refresh" content="0; URL= signInSuccess.php" />';
               } else {
                 echo '<meta http-equiv="refresh" content="0; URL= signInFail.php" />';
               }   
