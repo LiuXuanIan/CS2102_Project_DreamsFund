@@ -52,29 +52,33 @@
 			<div class="row">
 				<div class="col-xs-5 text-right menu-1">
 					<ul>
-						<li><a href="about.html">About Us</a></li>
+						<li><a href="about.php">About Us</a></li>
 						<li class="has-dropdown">
-							<a href="services.html">Projects</a>
+							<a href="Projects.php">Projects</a>
 							<ul class="dropdown">
-								<li><a href="#">Ongoing</a></li>
-								<li><a href="#">Successful</a></li>
+								<li><a href="projects.php">Ongoing</a></li>
+								<li><a href="projects.php">Successful</a></li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 				<div class="col-xs-2 text-center">
-					<div id="fh5co-logo"><a href="index.html">DreamsFund</a></div>
+					<div id="fh5co-logo"><a href="index.php">DreamsFund</a></div>
 				</div>
 				<div class="col-xs-5 text-left menu-1">
 					<ul>
 						<li class="has-dropdown">
-							<a href="#">Get started</a>
+							<a href="initiation.php">Get started</a>
 							<ul class="dropdown active">
-								<li><a href="#">Initiate</a></li>
-								<li><a href="#">Invest</a></li>
+								<li><a href="initiation.php">Initiate</a></li>
+								<li><a href="donate.php">Invest</a></li>
 							</ul>
-						</li>
-						<li><a href="contact.html">Sign in</a></li>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="signIn">Sign</a >
+                            <ul class="dropdown active">
+						    <li><a href="signIn.php">Sign in</a></li>
+                            <li><a href="signUp.php">Sign up</a ></li>
 					</ul>
 				</div>
 			</div>
