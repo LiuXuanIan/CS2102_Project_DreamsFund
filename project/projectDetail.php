@@ -69,7 +69,7 @@
 					<ul>
 						<li><a href="about.html">About Us</a></li>
 						<li class="has-dropdown">
-							<a href="services.html">Projects</a>
+							<a href="projects.php">Projects</a>
 							<ul class="dropdown">
 								<li><a href="#">Ongoing</a></li>
 								<li><a href="#">Successful</a></li>
@@ -110,8 +110,9 @@
 								$result = pg_query($db, "SELECT * FROM project_initiated_by WHERE projectid = $projectid");
 								$row = pg_fetch_assoc($result);
 								if(!empty($row)){
-									echo "<h1>$row[title]</h1>
-										<h2><a href='$row[resourceurl]' target='_blank'>$row[resourceurl]</a></h2>";
+									$resourceurl = $row[resourceurl];
+									echo "<h1>$row[title]</h1>";
+									echo '<h2><a href="'.$resourceurl.'" target="'._blank.'">Visit company website</a></h2>';
 								}
 							?>
 						</div>
@@ -130,7 +131,16 @@
 							<i class="icon-eye"></i>
 						</span>
 						<h3>Start Date</h3>
-						<p>2018-10-11</p>
+						<?php
+								$projectid = $_SESSION['projectid'];
+								$db = pg_connect("host=localhost port=5432 dbname=CrowdFunding user=postgres password=1Dcyq7!!");
+
+								$result = pg_query($db, "SELECT * FROM project_initiated_by WHERE projectid = $projectid");
+								$row = pg_fetch_assoc($result);
+								if(!empty($row)){
+									echo "<p>$row[startdate]</p>";
+								}
+						?>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -139,7 +149,16 @@
 							<i class="icon-command"></i>
 						</span>
 						<h3>Amount of Funds Sought</h3>
-						<p>$1,000,000</p>
+						<?php
+								$projectid = $_SESSION['projectid'];
+								$db = pg_connect("host=localhost port=5432 dbname=CrowdFunding user=postgres password=1Dcyq7!!");
+
+								$result = pg_query($db, "SELECT * FROM project_initiated_by WHERE projectid = $projectid");
+								$row = pg_fetch_assoc($result);
+								if(!empty($row)){
+									echo "<p>$$row[funding_sought]</p>";
+								}
+						?>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -148,7 +167,16 @@
 							<i class="icon-mouse"></i>
 						</span>
 						<h3>Funds Received</h3>
-						<p>$1,000</p>
+						<?php
+								$projectid = $_SESSION['projectid'];
+								$db = pg_connect("host=localhost port=5432 dbname=CrowdFunding user=postgres password=1Dcyq7!!");
+
+								$result = pg_query($db, "SELECT * FROM project_initiated_by WHERE projectid = $projectid");
+								$row = pg_fetch_assoc($result);
+								if(!empty($row)){
+									echo "<p>$$row[current_funding]</p>";
+								}
+						?>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -157,7 +185,16 @@
 							<i class="icon-publish"></i>
 						</span>
 						<h3>Location</h3>
-						<p>LA, America</p>
+						<?php
+								$projectid = $_SESSION['projectid'];
+								$db = pg_connect("host=localhost port=5432 dbname=CrowdFunding user=postgres password=1Dcyq7!!");
+
+								$result = pg_query($db, "SELECT * FROM project_initiated_by WHERE projectid = $projectid");
+								$row = pg_fetch_assoc($result);
+								if(!empty($row)){
+									echo "<p>$row[city], $row[country]</p>";
+								}
+						?>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -166,7 +203,16 @@
 							<i class="icon-shield"></i>
 						</span>
 						<h3>Number of donators</h3>
-						<p>3</p>
+						<?php
+								$projectid = $_SESSION['projectid'];
+								$db = pg_connect("host=localhost port=5432 dbname=CrowdFunding user=postgres password=1Dcyq7!!");
+
+								$result = pg_query($db, "SELECT * FROM project_initiated_by WHERE projectid = $projectid");
+								$row = pg_fetch_assoc($result);
+								if(!empty($row)){
+									echo "<p>$row[num_of_doners]</p>";
+								}
+						?>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4">
@@ -175,7 +221,16 @@
 							<i class="icon-suitcase"></i>
 						</span>
 						<h3>Description</h3>
-						<p>We connect the world! Google's corporate mission is “to organize the world's information and make it universally accessible and useful.”</p>
+						<?php
+								$projectid = $_SESSION['projectid'];
+								$db = pg_connect("host=localhost port=5432 dbname=CrowdFunding user=postgres password=1Dcyq7!!");
+
+								$result = pg_query($db, "SELECT * FROM project_initiated_by WHERE projectid = $projectid");
+								$row = pg_fetch_assoc($result);
+								if(!empty($row)){
+									echo "<p>$row[description]</p>";
+								}
+						?>
 					</div>
 				</div>
 			</div>
