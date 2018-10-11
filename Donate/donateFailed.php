@@ -75,7 +75,7 @@
 							</ul>
                         </li>
                         <li class="has-dropdown">
-                            <a href="signIn">Sign</a >
+                            <a href="signIn.php">Sign</a >
                             <ul class="dropdown active">
 						    <li><a href="signIn.php">Sign in</a></li>
                             <li><a href="signUp.php">Sign up</a ></li>
