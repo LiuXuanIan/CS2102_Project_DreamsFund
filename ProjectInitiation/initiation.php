@@ -54,7 +54,7 @@
 					<ul>
 						<li><a href="about.html">About Us</a></li>
 						<li class="has-dropdown">
-							<a href="services.html">Projects</a>
+							<a href="projects.php">Projects</a>
 							<ul class="dropdown">
 								<li><a href="#">Ongoing</a></li>
 								<li><a href="#">Successful</a></li>
@@ -70,11 +70,11 @@
 						<li class="has-dropdown">
 							<a href="#">Get started</a>
 							<ul class="dropdown active">
-								<li><a href="#">Initiate</a></li>
-								<li><a href="#">Invest</a></li>
+								<li><a href="initiation.php">Initiate</a></li>
+								<li><a href="projects.php">Invest</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html">Sign in</a></li>
+						<li><a href="signIn.php">Sign in</a></li>
 					</ul>
 				</div>
 			</div>
@@ -200,12 +200,18 @@
 						</div>
 
 					</form>	
-					<?php				
+					<?php		
+						$accountEmail = $_SESSION['userEmail'];		
 						$db = pg_connect("host=localhost port=5432 dbname=CrowdFunding user=postgres password=1Dcyq7!!");
+
+						if(isset($_SESSION['projectid'])){
+							echo 'project id has been set: '.$_SESSION['projectid'];
+						} else {
+							echo 'project id has not been set! '. 22222;
+						}
 
 						if(isset($_POST['Initiate'])) {
 							$result = pg_query($db, "INSERT INTO project_initiated_by VALUES(
-
 									DEFAULT,
 									'$_POST[title]',
 									'$_POST[resouceURL]', 
@@ -219,20 +225,15 @@
 									'ONGOING',
 									'$_POST[country]',
 									'$_POST[city]',
-									'xiexin2011@gmail.com');"
+									'$accountEmail') RETURNING projectid"
 							);
-								
+							
 							if (!$result) {
 								echo '<meta http-equiv="refresh" content="0; URL=initiationFailed.php" />';
 		        			} else {
-		        				$secondResult = pg_query($db, "SELECT * FROM project_initiated_by WHERE title = '$_POST[title]' AND resourceurl = '$_POST[resouceURL]' AND description = '$_POST[description]' AND startdate = '$_POST[startDate]' AND duration_of_months = $_POST[duration_of_months]);");
-		        				if(!$secondResult){
-		        					echo '<meta http-equiv="refresh" content="0; URL=initiationFailed.php" />';
-		        				} else {
-		        					$_SESSION['projectid'] = $secondResult[projectid];
-		        					$thirdResult = pg_query($db, "INSERT INTO belong_to VALUES ('$_POST[category]', $_SESSION['projectid'])");
-		        					echo '<meta http-equiv="refresh" content="0; URL=initiationSuccess.php" />';
-		        				}
+		        				$row = pg_fetch_row($result);
+		        				$_SESSION['projectid'] = $row[0];
+		        				echo '<meta http-equiv="refresh" content="0; URL=initiationSuccess.php" />';
 		        			}
 						}
 					?>	
