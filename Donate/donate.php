@@ -54,10 +54,10 @@
 					<ul>
 						<li><a href="about.html">About Us</a></li>
 						<li class="has-dropdown">
-							<a href="services.html">Projects</a>
+							<a href="#">Projects</a>
 							<ul class="dropdown">
-								<li><a href="#">Ongoing</a></li>
-								<li><a href="#">Successful</a></li>
+								<li><a href="projects.php">Ongoing</a></li>
+								<li><a href="projects.php">Successful</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -70,11 +70,17 @@
 						<li class="has-dropdown">
 							<a href="#">Get started</a>
 							<ul class="dropdown active">
-								<li><a href="#">Initiate</a></li>
-								<li><a href="#">Invest</a></li>
+								<li><a href="initiation.php">Initiate</a></li>
+								<li><a href="donate.php">Invest</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html">Sign in</a></li>
+						<li class="has-dropdown">
+							<a href="#">Sign</a>
+							<ul class="dropdown active">
+								<li><a href="signIn.php">Sign in</a></li>
+								<li><a href="signUp.php">Sign up</a></li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -145,10 +151,11 @@
 					</form>		
 				</div>
 				<?php
-                    //$_SESSION['userEmail'] = '134456@gmail.com';
-					$user_email = $_SESSION['userEmail'];
-                    $projectid = $_SESSION['projectID'];
-                    $db     = pg_connect("host=localhost port=5432 dbname=Project1 user=postgres password=370305");	
+					///////// modify //////////
+					          $user_email = $_SESSION['userEmail'];
+					          $projectid = 1;//$_SESSION['projectID'];
+					
+                    $db     = pg_connect("host=localhost port=5432 dbname=CrowdFunding user=postgres password=liu");	
                     $result = pg_query($db, "SELECT num_of_doners,current_funding 
                                              FROM project_initiated_by 
                                              WHERE projectID = '$projectid'");	
@@ -160,7 +167,7 @@
                     $usr_info = pg_fetch_assoc($usr);
                     
                     if($project == NULL) {
-                        echo '<meta http-equiv="refresh" content="0; URL= Project.php" />';
+                        echo '<meta http-equiv="refresh" content="0; URL= projects.php" />';
                     } else if ($usr_info == NULL) {
                         echo '<meta http-equiv="refresh" content="0; URL= sighIn.php" />';
                     } else {
@@ -169,7 +176,7 @@
                             //Fetch all data required:
                             //data to be updated
                             $num_doners = $project[num_of_doners];
-                            $num_doners++;
+                            $num_doners++; 
                             $current_fund = $project[current_funding];
                             $sought = $project[funding_sought];
                             $trans_pswd0 = $usr_info['transaction_password'];
@@ -183,20 +190,21 @@
                                 echo "<li>".$trans_pswd0."</li>"; echo "<li>".$trans_pswd1."</li>";
                                 //echo '<meta http-equiv="refresh" content="0; URL= wrongPswd.php" />';
                             }
-                            
+                            echo "<li>".$trans_pswd0."</li>"; echo "<li>".$trans_pswd1."</li>";
                             //insert a new fund record:
                             $t = date('Y-m-d H:i:s');
                             $result = pg_query($db, "INSERT INTO fund
-                                                     VALUES ('z', '$account', $amount, '$user_email', $projectid, '$t');");
+                                                     VALUES ('zzz', '$account', $amount, '$user_email', $projectid, '$t');");
                             if($result) {
                                 echo "<li>succeeded insert</li>";
                             } else {
-                                echo '<meta http-equiv="refresh" content="0; URL= donateFailed.php" />';
+								echo"insert failed";
+                                //echo '<meta http-equiv="refresh" content="0; URL= donateFailed.php" />';
                             }
                             //update project info
                             $result = pg_query($db, "UPDATE project_initiated_by
-                                                     SET $num_of_doners = $num_doners,
-                                                         $current_fund = $current_fund + $amount;");
+                                                     SET num_of_doners = $num_doners,
+                                                         current_funding = $current_fund + $amount;");
                             //if($current_fund + $amount >= $sought) {
                               //  echo '<meta http-equiv="refresh" content="0; URL= Project.php" />';
                             //}
