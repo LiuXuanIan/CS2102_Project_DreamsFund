@@ -11,7 +11,6 @@
 	
 	<!-- 
 	//////////////////////////////////////////////////////
-
 	FREE HTML5 TEMPLATE 
 	DESIGNED & DEVELOPED by FreeHTML5.co
 		
@@ -19,7 +18,6 @@
 	Email: 			info@freehtml5.co
 	Twitter: 		http://twitter.com/fh5co
 	Facebook: 		https://www.facebook.com/fh5co
-
 	//////////////////////////////////////////////////////
 	 -->
 
@@ -218,14 +216,14 @@
 				</div>
 
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="project_cate.php?cate=realestate"><img src="cate_img/cate_realestate.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+					<a href="project_cate.php?cate=real_estate"><img src="cate_img/cate_realestate.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
 						<h3>Real Estate</h3>
 						<span>Land</span>
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="project_cate.php?cate=retail"><img src="cate_img/cate_retail.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-						<h3>Retail</h3>
+					<a href="project_cate.php?cate=retails"><img src="cate_img/cate_retail.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+						<h3>Retails</h3>
 						<span>Trade</span>
 					</a>
 				</div>
@@ -431,4 +429,3 @@
 
 	</body>
 </html>
-
