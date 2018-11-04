@@ -3,7 +3,7 @@ insert into category values ('Construction');
 insert into category values ('Education');
 insert into category values ('Finance');
 insert into category values ('Health');
-insert into category values ('Manufactoring');
+insert into category values ('Manufacturing');
 insert into category values ('Professional');
 insert into category values ('Real_Estate');
 insert into category values ('Retails');
