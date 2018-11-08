@@ -1,4 +1,6 @@
 //new data
+insert into users values ('test@root.com', '66', '66', 'Myname', 'isCS2102', 'Singapore', 'TRUE');
+/*must include the user above*/
 insert into users values ('scaulcutt0@newsvine.com', 'OrgyVy', 'LnASyTTGHHV', 'Urson', 'Buddock', 'Kazakhstan', 'TRUE');
 insert into users values ('abrazier1@aol.com', 'jTdLzIMr', 'oci9tN', 'Clemmie', 'Giffaut', 'China', 'TRUE');
 insert into users values ('nstebbins2@stanford.edu', 'V6mlKEc08', 'vRJSGE30', 'Phoebe', 'Verzey', 'Poland', 'TRUE');
